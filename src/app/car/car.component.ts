@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '[app-car]',
+  selector: 'app-car',
 
   templateUrl: './car.component.html',
 

@@ -13,15 +13,19 @@ i {
   font-size: 10pt;
 }
 
-.secondInput {
+.margin20 {
   margin-top: 20px;
 }
 
 input {
-  width: 50%;
+  width: 56%;
   transition: 0.5s;
 }
 
 input:focus {
   width: 100%;
+}
+
+.margin-left {
+  margin-left: 20px;
 }

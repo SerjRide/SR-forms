@@ -12,10 +12,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 export class CarsComponent {
 
-  addCarStatus = '';
-  inputText1 = '';
-  inputText2 = '';
-  inputText3 = '';
+  addCarStatus  = '';
+  inputText1    = '';
+  inputText2    = '';
+  inputText3    = '';
+  carName       = '';
+  addCarStatus2 = false;
 
   constructor() {}
 
@@ -31,5 +33,13 @@ export class CarsComponent {
   onChangeInput2(v) { this.inputText2 = v }
 
   onKeyUp(e) { this.inputText3 = e.target.value }
+
+  addCar2() {
+    this.addCarStatus2 = true;
+  }
+
+  cancel() {
+    this.addCarStatus2 = false
+  }
 
 }

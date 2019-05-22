@@ -1,7 +1,7 @@
-<h5>Селекторы элемента</h5>
-<!-- <app-car></app-car>  selector: 'app-cars' -->
-<!-- <div class="app-car"></div>  selector: '.app-car' -->
-<div app-car></div> <!-- selector: '[app-car]' -->
+<!--                     Селекторы элемента                   -->
+<!--   <app-car></app-car>            selector: 'app-cars'    -->
+<!--   <div class="app-car"></div>    selector: '.app-car'    -->
+<!--   <div app-car></div>            selector: '[app-car]'   -->
 
 <hr>
 <h5>Событие click</h5>
@@ -12,6 +12,8 @@
 </button>
 <p>{{ addCarStatus }}</p>
 
+<!-- less 7 -->
+
 <hr>
 <h5>Событие input</h5>
 <p>Аналог onChange из React</p>
@@ -20,6 +22,8 @@
   class="form-control"
   (input)="onChangeInput1($event)">
 <p>{{ inputText1 }}</p>
+
+<!-- less 8 -->
 
 <hr>
 <h5>Событие input <i>вариант 2</i></h5>
@@ -30,6 +34,8 @@
   (input)="onChangeInput2(myInp.value)">
 <p>{{ inputText2 }}</p>
 
+<!-- less 9 -->
+
 <hr>
 <h5>Событие keyup и двухсторонняя привязка</h5>
 <p>Срабатывает по нажатию на Enter</p>
@@ -39,6 +45,42 @@
   (keyup.enter)="onKeyUp($event)">
 <input
   type="text"
-  class="form-control secondInput"
+  class="form-control margin20"
   [(ngModel)]="inputText3">
 <p>{{ inputText3 }}</p>
+
+<!-- less 10 -->
+
+<hr>
+<h5>Директива ngIf else</h5>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="carName">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <button
+        (click)="addCar2()"
+        class="btn btn-primary margin20">
+        Добавить машину
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button
+        (click)="cancel()"
+        class="btn btn-danger margin20 margin-left">
+        Отмена
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<p *ngIf="!addCarStatus2; else sucStatus">
+  машина не добавлена
+</p>
+<ng-template #sucStatus>
+  <p>машина добавлена!</p>
+</ng-template>
