@@ -85,9 +85,26 @@
   <p>машина добавлена!</p>
 </ng-template>
 
-<!-- less 11 -->
+<!-- less 11, 12 -->
+<ul>
+  <li *ngFor="let i of cars;
+              let idx = index">
+    <div
+    [ngStyle]="{
 
-<app-car *ngFor="let i of cars"></app-car>
+      color: (idx + 1) % 2 === 0 ? '#6A6DC9' : '#D9D85C',
+      borderBottom : 'solid 1px #2C3637',
+      width: '52%'
+
+    }"
+    [ngClass]="{ 'pulse-text': setPulseText(i) }">
+    {{ idx + 1 }} : {{i}}</div>
+  </li>
+</ul>
+
+
+<hr>
+<h5>Директива ngFor</h5>
 <ul>
   <li *ngFor="let i of items;
               let idx = index ">

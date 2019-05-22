@@ -50,4 +50,6 @@ export class CarsComponent {
     if (cars.length > 3) this.cars = cars.slice(0, cars.length - 1);
   }
 
+  setPulseText(car: string) { return car.length > 4 ? true : false }
+
 }

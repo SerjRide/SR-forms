@@ -29,3 +29,13 @@ input:focus {
 .margin-left {
   margin-left: 20px;
 }
+
+.pulse-text {
+  animation: pulse_text 1s ease infinite;
+}
+
+@keyframes pulse_text {
+  0%   { text-shadow: 0 0 0px  $a }
+  50%  { text-shadow: 0 0 10px $a }
+  100% { text-shadow: 0 0 0px  $a }
+}
