@@ -18,6 +18,12 @@ export class CarsComponent {
   inputText3    = '';
   carName       = '';
   addCarStatus2 = false;
+  cars          = ['Ford', 'Audi', 'BMW'];
+  items         = [
+    {id: 1, value: '1fwefq21'},
+    {id: 2, value: '43t4g4g3'},
+    {id: 3, value: '3f24g3gh'}
+  ];
 
   constructor() {}
 
@@ -26,9 +32,7 @@ export class CarsComponent {
     setTimeout(() => this.addCarStatus = '', 1000);
   }
 
-  onChangeInput1(e) {
-    this.inputText1 = e.target.value;
-  }
+  onChangeInput1(e) { this.inputText1 = e.target.value }
 
   onChangeInput2(v) { this.inputText2 = v }
 
@@ -36,10 +40,14 @@ export class CarsComponent {
 
   addCar2() {
     this.addCarStatus2 = true;
+    this.cars.push(this.carName);
+    this.carName = '';
   }
 
   cancel() {
-    this.addCarStatus2 = false
+    const { cars } = this
+    this.addCarStatus2 = false;
+    if (cars.length > 3) this.cars = cars.slice(0, cars.length - 1);
   }
 
 }

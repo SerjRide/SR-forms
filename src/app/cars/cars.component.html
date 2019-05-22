@@ -84,3 +84,13 @@
 <ng-template #sucStatus>
   <p>машина добавлена!</p>
 </ng-template>
+
+<!-- less 11 -->
+
+<app-car *ngFor="let i of cars"></app-car>
+<ul>
+  <li *ngFor="let i of items;
+              let idx = index ">
+    <b>{{idx + 1}}</b> : {{i.value}}
+  </li>
+</ul>
