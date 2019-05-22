@@ -1,2 +1,10 @@
-<app-car></app-car>
-<app-car></app-car>
+<button
+  [disabled]="!canAddCar"
+  class="btn btn-primary">
+  Добавить машину
+</button>
+
+<hr>
+
+<div app-car></div>
+<div app-car></div>

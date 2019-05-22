@@ -1,5 +1,6 @@
-$r : red; $g : green; $b : blue;
+$a : aqua; $b : blue; $g : green; $r : red;
 
-h4 {
-  color: $r;
+h4, p {
+  color: $a;
+  margin-top: 20px;
 }
