@@ -1,3 +1,14 @@
+$a : aqua;
+
 hr {
   border-top: solid 1px #214C59;
+}
+
+p, h5 {
+  color: $a
+}
+
+i {
+  color: #066B5E;
+  font-size: 10pt;
 }

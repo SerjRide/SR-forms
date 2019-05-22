@@ -1,10 +1,40 @@
+<h5>Селекторы элемента</h5>
+<!-- <app-car></app-car>  selector: 'app-cars' -->
+<!-- <div class="app-car"></div>  selector: '.app-car' -->
+<div app-car></div> <!-- selector: '[app-car]' -->
+
+<hr>
+<h5>Событие click</h5>
 <button
-  [disabled]="!canAddCar"
+  (click)="addCar()"
   class="btn btn-primary">
   Добавить машину
 </button>
+<p>{{ addCarStatus }}</p>
 
 <hr>
+<h5>Событие input</h5>
+<p>Аналог onChange из React</p>
+<input
+  type="text"
+  class="form-control"
+  (input)="onChangeInput1($event)">
+<p>{{ inputText1 }}</p>
 
-<div app-car></div>
-<div app-car></div>
+<hr>
+<h5>Событие input <i>вариант 2</i></h5>
+<input
+  #myInp
+  type="text"
+  class="form-control"
+  (input)="onChangeInput2(myInp.value)">
+<p>{{ inputText2 }}</p>
+
+<hr>
+<h5>Событие keyup </h5>
+<p>Срабатывает по нажатию на Enter</p>
+<input
+  type="text"
+  class="form-control"
+  (keyup.enter)="onKeyUp($event)">
+<p>{{ inputText3 }}</p>
