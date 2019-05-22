@@ -12,3 +12,16 @@ i {
   color: #066B5E;
   font-size: 10pt;
 }
+
+.secondInput {
+  margin-top: 20px;
+}
+
+input {
+  width: 50%;
+  transition: 0.5s;
+}
+
+input:focus {
+  width: 100%;
+}

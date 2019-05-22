@@ -31,10 +31,14 @@
 <p>{{ inputText2 }}</p>
 
 <hr>
-<h5>Событие keyup </h5>
+<h5>Событие keyup и двухсторонняя привязка</h5>
 <p>Срабатывает по нажатию на Enter</p>
 <input
   type="text"
   class="form-control"
   (keyup.enter)="onKeyUp($event)">
+<input
+  type="text"
+  class="form-control secondInput"
+  [(ngModel)]="inputText3">
 <p>{{ inputText3 }}</p>
