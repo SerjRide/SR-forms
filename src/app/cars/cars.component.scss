@@ -17,12 +17,12 @@ i {
   margin-top: 20px;
 }
 
-input {
+input.form-control {
   width: 56%;
   transition: 0.5s;
 }
 
-input:focus {
+input.form-control:focus {
   width: 100%;
 }
 
