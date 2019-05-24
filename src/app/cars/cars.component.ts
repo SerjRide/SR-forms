@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cars',
@@ -23,6 +19,12 @@ export class CarsComponent {
     {id: 1, value: '1fwefq21'},
     {id: 2, value: '43t4g4g3'},
     {id: 3, value: '3f24g3gh'}
+  ];
+  dates         = [
+    new Date(2015, 3, 14),
+    new Date(2016, 6, 22),
+    new Date(2017, 7, 15),
+    new Date(2015, 4, 6)
   ];
 
   constructor() {}

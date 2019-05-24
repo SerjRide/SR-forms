@@ -111,3 +111,13 @@
     <b>{{idx + 1}}</b> : {{i.value}}
   </li>
 </ul>
+
+<!-- less 13 -->
+<hr>
+<h5>Пайпы</h5>
+<ul>
+  <li *ngFor="let i of dates;
+              let idx = index ">
+    <b>{{ 'дата' | uppercase }}</b> : {{ i | date:'short' }} 
+  </li>
+</ul>
