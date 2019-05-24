@@ -118,6 +118,21 @@
 <ul>
   <li *ngFor="let i of dates;
               let idx = index ">
-    <b>{{ 'дата' | uppercase }}</b> : {{ i | date:'short' }} 
+    <b>{{ 'дата' | uppercase }}</b> : {{ i | date:'short' }}
   </li>
 </ul>
+
+<!-- less 14, 15 -->
+<hr>
+<h5>Передача параметров в компоненты и получение данных из комонентов</h5>
+
+<app-add-car
+  (onAddCar)="updateCarList($event)"
+  (onCancel)="cancel2()">
+</app-add-car>
+
+<app-car
+  *ngFor="let car of cars2"
+  [carItem] = "car"
+  [ngClass]="{ 'pulse-text': setPulseText2(car) }">
+</app-car>

@@ -1,0 +1,28 @@
+<input
+  type="text" placeholder="Название авто"
+  class="form-control"
+  [(ngModel)]="carName">
+
+<input
+  type="number" placeholder="Год"
+  class="form-control margin20"
+  [(ngModel)]="carYear">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <button
+        (click)="addCar3()"
+        class="btn btn-primary margin20">
+        Добавить машину
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button
+        (click)="cancel()"
+        class="btn btn-danger margin20 margin-left">
+        Отмена
+      </button>
+    </div>
+  </div>
+</div>

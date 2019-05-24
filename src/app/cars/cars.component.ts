@@ -13,8 +13,14 @@ export class CarsComponent {
   inputText2    = '';
   inputText3    = '';
   carName       = '';
+  carYear       : number;
   addCarStatus2 = false;
   cars          = ['Ford', 'Audi', 'BMW'];
+  cars2 : [{name: string, year: number}] = [
+    {name:'Honda', year: 1994},
+    {name:'Aston Martin', year: 2001},
+    {name:'Mitsubishi', year: 2005}
+  ];
   items         = [
     {id: 1, value: '1fwefq21'},
     {id: 2, value: '43t4g4g3'},
@@ -52,6 +58,17 @@ export class CarsComponent {
     if (cars.length > 3) this.cars = cars.slice(0, cars.length - 1);
   }
 
-  setPulseText(car: string) { return car.length > 4 ? true : false }
+  setPulseText  (car: string) { return car.length > 4 ? true : false };
+
+  setPulseText2 (car) { return car.year > 2000 ? true : false };
+
+  updateCarList(car: {name: string, year: number}){
+    this.cars2.push(car);
+  }
+
+  cancel2() {
+    const { cars2 } = this;
+    if (cars2.length > 3) this.cars2 = cars2.slice(0, cars2.length - 1);
+  }
 
 }
