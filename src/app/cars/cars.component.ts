@@ -18,10 +18,10 @@ export class CarsComponent {
   carYear       : number;
   addCarStatus2 = false;
   cars          = ['Ford', 'Audi', 'BMW'];
-  cars2 : [{name: string, year: number}] = [
-    {name:'Honda', year: 1994},
-    {name:'Aston Martin', year: 2001},
-    {name:'Mitsubishi', year: 2005}
+  cars2 : [{name: string, mark: string, year: number}] = [
+    {name:'Honda',        mark: 'Civic', year: 1994},
+    {name:'Aston Martin', mark: 'DB9',   year: 2001},
+    {name:'Mitsubishi',   mark: 'Evo',   year: 2005}
   ];
   items         = [
     {id: 1, value: '1fwefq21'},
@@ -64,7 +64,7 @@ export class CarsComponent {
 
   setPulseText2 (car) { return car.year > 2000 ? true : false };
 
-  updateCarList(car: {name: string, year: number}){
+  updateCarList(car: {name: string, mark: string, year: number}){
     this.cars2.push(car);
   }
 

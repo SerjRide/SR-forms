@@ -22,6 +22,6 @@ import { Component, Input } from '@angular/core';
 export class CarComponent  {
 
   private carItem;
-  @Input("carItem") car : {name: string, year: number};
+  @Input("carItem") car : {name: string, mark: string, year: number};
 
 }
