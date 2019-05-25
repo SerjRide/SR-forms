@@ -131,8 +131,12 @@
   (onCancel)="cancel2()">
 </app-add-car>
 
-<app-car
-  *ngFor="let car of cars2"
-  [carItem] = "car"
-  [ngClass]="{ 'pulse-text': setPulseText2(car) }">
-</app-car>
+<div class     ="list-group margin20">
+  <app-car
+    class      = "list-group-item"
+    *ngFor     = "let car of cars2"
+    [carItem]  = "car"
+    [ngClass]  = "{ 'pulse-text': setPulseText2(car) }">
+    <div #innerAlert class ="alert alert-dark"></div>
+  </app-car>
+</div>

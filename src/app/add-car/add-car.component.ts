@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output,
+import { Component, EventEmitter, Output,
          ViewChild, ElementRef } from '@angular/core';
 
 @Component({
@@ -6,10 +6,12 @@ import { Component, OnInit, EventEmitter, Output,
   templateUrl: './add-car.component.html',
   styleUrls: ['./add-car.component.scss']
 })
-export class AddCarComponent implements OnInit {
+export class AddCarComponent {
 
   carYear               : number;
-  @Output() onAddCar    = new EventEmitter<{name: string, mark: string, year: number}>();
+  @Output() onAddCar    = new EventEmitter<{name: string,
+                                            mark: string,
+                                            year: number}>();
   @Output('onCancel') c = new EventEmitter();
   @ViewChild('carMarkInput') carMark : ElementRef;
 

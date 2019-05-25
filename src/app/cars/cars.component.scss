@@ -13,10 +13,6 @@ i {
   font-size: 10pt;
 }
 
-.margin20 {
-  margin-top: 20px;
-}
-
 input.form-control {
   width: 56%;
   transition: 0.5s;
@@ -26,12 +22,30 @@ input.form-control:focus {
   width: 100%;
 }
 
+.margin20 {
+  margin-top: 20px;
+}
+
 .margin-left {
   margin-left: 20px;
 }
 
 .pulse-text {
   animation: pulse_text 1s ease infinite;
+}
+
+.list-group-item {
+  background-color: #292929;
+}
+
+.alert-dark {
+  opacity: 0.3;
+  background-color: #3D3D3D;
+  color: $a;
+  padding: 1px;
+  margin-left: 10px;
+  margin-bottom: 0;
+  border: solid 0px #474747;
 }
 
 @keyframes pulse_text {

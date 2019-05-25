@@ -1,3 +1,14 @@
-<p>
-  {{ car.name }} {{ car.mark }} ({{ car.year }} год)
-</p>
+<h4 class="list-group-item-heading">
+  {{ car.name }}<small>
+  {{ car.mark }}</small>
+</h4>
+
+
+<div class="row list-group-item-text">
+  <div class="col-xs-6">
+    <p>({{ car.year }} год)</p>
+  </div>
+  <div class="col-xs-6">
+    <ng-content class="margin-left"></ng-content>
+  </div>
+</div>

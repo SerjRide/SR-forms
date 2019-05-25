@@ -2,5 +2,9 @@ $a : aqua; $b : blue; $g : green; $r : red;
 
 h4, p {
   color: $a;
-  margin-top: 20px;
+}
+
+.list-group-item-heading,
+.list-group-item-text {
+  margin: 2px;
 }
