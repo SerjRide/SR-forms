@@ -1,3 +1,9 @@
+$a: aqua; $p:  #FF60F4;
+
+@function txtS($param) {
+  @return 0 0 20px $param;
+}
+
 .center {
   display: flex;
   align-items: center;
@@ -7,4 +13,24 @@
 .directive-test {
   margin: 50px;
   font-size: 175%;
+  cursor: default;
+}
+
+.mouse-enter {
+  text-shadow: txtS($p) !important;
+  animation: mouse-enter 0.2s;
+}
+
+.mouse-leave {
+  animation: mouse-leave 0.2s;
+}
+
+@keyframes mouse-enter {
+  0%   { text-shadow: txtS($a) }
+  100% { text-shadow: txtS($p) }
+}
+
+@keyframes mouse-leave {
+  0%   { text-shadow: txtS($p) }
+  100% { text-shadow: txtS($a) }
 }

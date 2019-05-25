@@ -1,4 +1,4 @@
-import { Directive, ElementRef,
+import { Directive, ElementRef, HostListener,
          OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
@@ -16,4 +16,13 @@ export class ColorDirective implements OnInit {
     this.renderer.addClass(el, 'directive-test');
     this.element.nativeElement.style.color = '#1A1A1A';
   }
+
+  @HostListener('mouseenter', ['$event']) mouseEnter(e: Event) {
+    e.target.className += 'directive mouse-enter';
+  }
+
+  @HostListener('mouseleave') mouseLeave() {
+    this.element.nativeElement.className = 'directive-test mouse-leave';
+  }
+
 }
