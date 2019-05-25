@@ -8,13 +8,15 @@ import { CarComponent } from './car/car.component';
 
 import { FormsModule } from '@angular/forms';
 import { AddCarComponent } from './add-car/add-car.component';
+import { ColorDirective } from './directives/color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarsComponent,
     CarComponent,
-    AddCarComponent
+    AddCarComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,
