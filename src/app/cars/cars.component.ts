@@ -34,6 +34,8 @@ export class CarsComponent {
     new Date(2017, 7, 15),
     new Date(2015, 4, 6)
   ];
+  numbers = [1, 4, 8, 2];
+  current = 3;
 
   constructor() {}
 
@@ -72,5 +74,7 @@ export class CarsComponent {
     const { cars2 } = this;
     if (cars2.length > 3) this.cars2 = cars2.slice(0, cars2.length - 1);
   }
+
+  onClick(num: number) { this.current = num }
 
 }

@@ -149,3 +149,23 @@
       [stat]     = "'hover'">
   Создание своей директивы</h5>
 </div>
+
+<!-- less 24 -->
+<hr>
+<h5>Директива ngSwitch</h5>
+
+<ul class="list-group">
+  <li *ngFor="let num of numbers"
+    (click)="onClick(num)"
+    class="list-group-item">
+    {{ num }}
+  </li>
+</ul>
+
+<ul class="list-group margin20" [ngSwitch]="current">
+  <li *ngSwitchCase="1" class="list-group-item">1</li>
+  <li *ngSwitchCase="2" class="list-group-item">2</li>
+  <li *ngSwitchCase="4" class="list-group-item">4</li>
+  <li *ngSwitchCase="8" class="list-group-item">8</li>
+  <li *ngSwitchDefault  class="list-group-item">default</li>
+</ul>
