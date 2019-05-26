@@ -18,7 +18,7 @@ export class CarsComponent {
   carYear       : number;
   addCarStatus2 = false;
   cars          = ['Ford', 'Audi', 'BMW'];
-  cars2 : [{name: string, mark: string, year: number}] = [
+  cars2  = [
     {name:'Honda',        mark: 'Civic', year: 1994},
     {name:'Aston Martin', mark: 'DB9',   year: 2001},
     {name:'Mitsubishi',   mark: 'Evo',   year: 2005}

@@ -1,4 +1,4 @@
-$a: aqua; $p:  #FF60F4;
+$p:  #FF60F4;
 
 @function txtS($param) {
   @return 0 0 20px $param;
@@ -16,21 +16,19 @@ $a: aqua; $p:  #FF60F4;
   cursor: default;
 }
 
-.mouse-enter {
+.hover {
+  transition: text-shadow 0.2s;
   text-shadow: txtS($p) !important;
-  animation: mouse-enter 0.2s;
 }
 
 .mouse-leave {
-  animation: mouse-leave 0.2s;
+  transition: text-shadow 0.2s;
 }
 
-@keyframes mouse-enter {
-  0%   { text-shadow: txtS($a) }
-  100% { text-shadow: txtS($p) }
+.pulse {
+  animation: pulse 0.5s infinite;
 }
 
-@keyframes mouse-leave {
-  0%   { text-shadow: txtS($p) }
-  100% { text-shadow: txtS($a) }
+@keyframes pulse {
+  50% { text-shadow: txtS($p) }
 }
