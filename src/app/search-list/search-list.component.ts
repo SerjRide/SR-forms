@@ -25,7 +25,8 @@ export class SearchListComponent {
   onClickFilter(config) {
     const arr = document.getElementsByClassName('searchBtn');
     for (let i = 0; i < arr.length; i++) {
-      let color = arr[i].name === config ? 'success' : 'primary';
+      let el = <HTMLInputElement> arr[i];
+      let color = el.name === config ? 'success' : 'primary';
       arr[i].className = `searchBtn btn btn-${color}`;
     } this.filter = config;
   }

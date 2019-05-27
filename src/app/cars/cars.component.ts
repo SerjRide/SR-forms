@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cars',
@@ -37,6 +39,7 @@ export class CarsComponent {
   numbers = [1, 4, 8, 2];
   current = 3;
   pi = Math.PI;
+  asyncTitle = of('Async title 3 seconds').pipe(delay(3000));
 
 
   constructor() {}
