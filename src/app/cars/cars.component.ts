@@ -25,12 +25,12 @@ export class CarsComponent {
     {name:'Aston Martin', mark: 'DB9',   year: 2001},
     {name:'Mitsubishi',   mark: 'Evo',   year: 2005}
   ];
-  items         = [
+  items = [
     {id: 1, value: '1fwefq21'},
     {id: 2, value: '43t4g4g3'},
     {id: 3, value: '3f24g3gh'}
   ];
-  dates         = [
+  dates = [
     new Date(2015, 3, 14),
     new Date(2016, 6, 22),
     new Date(2017, 7, 15),
@@ -39,7 +39,7 @@ export class CarsComponent {
   numbers = [1, 4, 8, 2];
   current = 3;
   pi = Math.PI;
-  asyncTitle = of('Async title 3 seconds').pipe(delay(3000));
+  asyncTitle = of('Async title').pipe(delay(3000));
 
 
   constructor() {}

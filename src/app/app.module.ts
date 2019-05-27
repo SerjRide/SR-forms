@@ -12,6 +12,7 @@ import { ColorDirective } from './directives/color.directive';
 import { PowPipe } from './pow.pipe';
 import { SearchListComponent } from './search-list/search-list.component';
 import { CarFilterPipe } from './car-filter.pipe';
+import { CarSellComponent } from './car-sell/car-sell.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarFilterPipe } from './car-filter.pipe';
     ColorDirective,
     PowPipe,
     SearchListComponent,
-    CarFilterPipe
+    CarFilterPipe,
+    CarSellComponent
   ],
   imports: [
     BrowserModule,

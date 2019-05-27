@@ -1,0 +1,31 @@
+$a: aqua;
+
+.margin-left-20 {
+  margin-left: 15px;
+}
+
+.btn-aqua {
+  color: $a;
+  border: solid 1px $a;
+}
+
+.btn-active:focus, .btn-active:hover {
+  box-shadow: 0 0 10px $a;
+}
+
+.btn-disable {
+  opacity: 0.2;
+  cursor: no-drop;
+}
+
+.btn-disable:focus {
+  box-shadow: 0 0 0 $a;
+}
+
+.item-active {
+  background-color: #004F48;
+}
+
+.item-disable {
+  background-color: #804044;
+}
