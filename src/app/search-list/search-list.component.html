@@ -5,25 +5,49 @@
   placeholder="Поиск">
 
 <div class="row margin20">
-  <div class="col-xs-4 margin-left">
+  <div class="col-xs-2 margin-left">
     <button (click)="onClickFilter($event.target.name)"
       name="id" class="searchBtn btn btn-primary">
       ID
     </button>
   </div>
-  <div class="col-xs-4 margin-left">
+  <div class="col-xs-2 margin-left">
     <button (click)="onClickFilter($event.target.name)"
       name="name" class="searchBtn btn btn-success">
       Название
     </button>
   </div>
-  <div class="col-xs-4 margin-left">
+  <div class="col-xs-2 margin-left">
     <button (click)="onClickFilter($event.target.name)"
       name="year" class="searchBtn btn btn-primary">
       Год
     </button>
   </div>
+  <div class="col-xs-2 margin-left">
+    <button (click)="showForm()"
+      name="show" class="btn btn-primary">
+      +
+    </button>
+  </div>
 </div>
+
+<div *ngIf="form">
+  <input
+    [(ngModel)]="carName"
+    class="form-control margin20"
+    type="text"
+    placeholder="Название">
+  <input
+    [(ngModel)]="carYear"
+    class="form-control margin20"
+    type="text"
+    placeholder="Год">
+  <button (click)="addCarInList()"
+    name="add" class="btn btn-primary margin20">
+    Добавить
+  </button>
+</div>
+
 
 <ul class="list-group margin20">
   <li class="list-group-item"

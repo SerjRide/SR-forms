@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class SearchListComponent {
 
   searchCar = '';
-  filter = 'name';
+  filter    = 'name';
+  form      = false;
+  carName   = '';
+  carYear   = '';
 
   cars = [
     {id: '1', name: 'Ford',     year: '1987'},
@@ -25,6 +28,13 @@ export class SearchListComponent {
       let color = arr[i].name === config ? 'success' : 'primary';
       arr[i].className = `searchBtn btn btn-${color}`;
     } this.filter = config;
+  }
+
+  showForm() { this.form = this.form ? false : true }
+
+  addCarInList() {
+    const id = (this.cars.length + 1).toString();
+    this.cars.push({ id:id, name: this.carName, year: this.carYear })
   }
 
 }
