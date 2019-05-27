@@ -1,0 +1,34 @@
+<input
+  [(ngModel)]="searchCar"
+  class="form-control margin20"
+  type="text"
+  placeholder="Поиск">
+
+<div class="row margin20">
+  <div class="col-xs-4 margin-left">
+    <button (click)="onClickFilter($event.target.name)"
+      name="id" class="searchBtn btn btn-primary">
+      ID
+    </button>
+  </div>
+  <div class="col-xs-4 margin-left">
+    <button (click)="onClickFilter($event.target.name)"
+      name="name" class="searchBtn btn btn-success">
+      Название
+    </button>
+  </div>
+  <div class="col-xs-4 margin-left">
+    <button (click)="onClickFilter($event.target.name)"
+      name="year" class="searchBtn btn btn-primary">
+      Год
+    </button>
+  </div>
+</div>
+
+<ul class="list-group margin20">
+  <li class="list-group-item"
+      *ngFor="let car of cars | carFilter:searchCar:filter;
+              let idx = index">
+    {{ car.id }}) {{ car.name }} ({{ car.year }} год)
+  </li>
+</ul>

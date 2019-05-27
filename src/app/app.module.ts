@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { AddCarComponent } from './add-car/add-car.component';
 import { ColorDirective } from './directives/color.directive';
 import { PowPipe } from './pow.pipe';
+import { SearchListComponent } from './search-list/search-list.component';
+import { CarFilterPipe } from './car-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PowPipe } from './pow.pipe';
     CarComponent,
     AddCarComponent,
     ColorDirective,
-    PowPipe
+    PowPipe,
+    SearchListComponent,
+    CarFilterPipe
   ],
   imports: [
     BrowserModule,
