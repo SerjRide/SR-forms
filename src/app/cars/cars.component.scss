@@ -4,7 +4,7 @@ hr {
   border-top: solid 1px #214C59;
 }
 
-p, h5, li {
+p, h5, h6, li, pre {
   color: $a
 }
 
@@ -34,7 +34,7 @@ input.form-control:focus {
   animation: pulse_text 1s ease infinite;
 }
 
-.list-group-item {
+.list-group-item, pre {
   background-color: #292929;
 }
 

@@ -36,6 +36,8 @@ export class CarsComponent {
   ];
   numbers = [1, 4, 8, 2];
   current = 3;
+  pi = Math.PI;
+
 
   constructor() {}
 

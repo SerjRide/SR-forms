@@ -169,3 +169,26 @@
   <li *ngSwitchCase="8" class="list-group-item">8</li>
   <li *ngSwitchDefault  class="list-group-item">default</li>
 </ul>
+
+<!-- less 24 -->
+<hr>
+<h5>Испоьзование пайпов</h5>
+<h6>{{ 'Нижний регистр'  | lowercase }}</h6>
+<h6>{{ 'Верхний регистр' | uppercase }}</h6>
+<h6>{{ 'Обрезать строку' | slice:0:12 }}</h6>
+<h6>{{ 'Обрезать и перевести верхний регистр' | slice:0:34 | uppercase }}</h6>
+<h6>Вывод чисел: {{ pi | number }}</h6>
+<h6>Вывод чисел: {{ pi | number:'2.4' }}</h6>
+<h6>Вывод чисел: {{ pi | number:'3.5' }}</h6>
+<h6>Валюта: {{ 1000 | currency:'EUR':"symbol" }}</h6>
+<h6>Дата: {{ dates[0] | date }}</h6>
+<h6>Дата: {{ dates[0] | date:'fullDate' }}</h6>
+<h6>Дата: {{ dates[0] | date:'shortDate' }}</h6>
+<h6>Время: {{ dates[0] | date:'shortTime' }}</h6>
+<h6>Проценты: {{ 0.45 | percent }}</h6>
+<h6>Вывод объектов: <pre class="margin20">{{ items | json }}</pre></h6>
+
+<!-- less 25 -->
+<hr>
+<h5>Создание своего пайпа</h5>
+<h6>{{ 25 | appPow:3:'=' }}</h6>

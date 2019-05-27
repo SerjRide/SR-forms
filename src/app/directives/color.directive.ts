@@ -19,7 +19,7 @@ export class ColorDirective implements OnInit {
     this.element.nativeElement.style.color = '#1A1A1A';
   }
 
-  @HostListener('mouseenter', ['$event']) mouseEnter(e: Event) {
+  @HostListener('mouseenter', ['$event']) mouseEnter(e) {
     e.target.className = `directive-test ${this.stat}`;
   }
 
