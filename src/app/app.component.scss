@@ -29,6 +29,11 @@ $p:  #FF60F4;
   animation: pulse 0.5s infinite;
 }
 
+.margin-top {
+  margin-top: 20px;
+}
+
+
 @keyframes pulse {
   50% { text-shadow: txtS($p) }
 }

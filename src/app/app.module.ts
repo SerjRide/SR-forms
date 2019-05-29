@@ -13,6 +13,8 @@ import { PowPipe } from './pow.pipe';
 import { SearchListComponent } from './search-list/search-list.component';
 import { CarFilterPipe } from './car-filter.pipe';
 import { CarSellComponent } from './car-sell/car-sell.component';
+import { CarSecondComponent } from './car-second/car-second.component';
+import { CarAddSecondComponent } from './car-add-second/car-add-second.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CarSellComponent } from './car-sell/car-sell.component';
     PowPipe,
     SearchListComponent,
     CarFilterPipe,
-    CarSellComponent
+    CarSellComponent,
+    CarSecondComponent,
+    CarAddSecondComponent
   ],
   imports: [
     BrowserModule,

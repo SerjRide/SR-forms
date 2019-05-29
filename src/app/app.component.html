@@ -1,1 +1,13 @@
 <app-cars></app-cars>
+
+<div class="col-xs-8 col-xs-offset-2">
+  <app-car-add-second
+    (onCarAdd)="addCarToList($event)">
+  </app-car-add-second>
+</div>
+<div class="list-group margin-top">
+  <app-car-second
+    *ngFor="let car of cars"
+    [car]="car">
+  </app-car-second>
+</div>
